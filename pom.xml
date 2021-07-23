@@ -7,6 +7,8 @@
   <version>2.0.0</version>
   <name>HelloWorld</name>
   <url>http://maven.apache.org</url>
+
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -28,4 +30,12 @@
       <url>http://127.0.0.1:8081/repository/maven-snapshots</url>
     </snapshotRepository>
   </distributionManagement>
+
+  <properties>
+  <sonar.projectKey>gvreddy1265_HelloJava</sonar.projectKey>
+  <sonar.organization>gvreddy1265</sonar.organization>
+  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+       <maven.compiler.source>11</maven.compiler.source>
+     <maven.compiler.target>11</maven.compiler.target>
+</properties>
 </project>
