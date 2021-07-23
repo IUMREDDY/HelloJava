@@ -8,6 +8,7 @@ pipeline {
         stage('build && SonarQube analysis') {
             steps {
                 withSonarQubeEnv('sonar') {
+                        sh '${MAVEN_HOME} clean test'
                         sh '${MAVEN_HOME} verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.login=4d1f16b44320184bcb4e78fcb5364a5832931064'
                         //sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.login=4d1f16b44320184bcb4e78fcb5364a5832931064'
                 }
