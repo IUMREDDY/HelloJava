@@ -10,8 +10,8 @@ pipeline {
                 withSonarQubeEnv('sonar') {
                     // Optionally use a Maven environment you've configured already
                     withMaven(maven:'Maven 3.6') {
-                        sh 'mvn clean package'
-                        sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.login=4d1f16b44320184bcb4e78fcb5364a5832931064'
+                        sh 'mvn clean package sonar:sonar'
+                        //sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.login=4d1f16b44320184bcb4e78fcb5364a5832931064'
                     }
                 }
             }
